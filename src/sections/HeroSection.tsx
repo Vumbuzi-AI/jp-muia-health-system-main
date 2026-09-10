@@ -1,6 +1,4 @@
-import { useRef, useState } from "react";
 import { SITE_IMAGES } from "../assets/images";
-import VideoModal from "../components/VideoModal";
 import "./HeroSection.css";
 
 function ExploreArrow() {
@@ -19,18 +17,7 @@ function ExploreArrow() {
   );
 }
 
-function Play() {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M8 5v14l11-7z" />
-    </svg>
-  );
-}
-
 export default function HeroSection() {
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
-  const videoTriggerRef = useRef<HTMLButtonElement>(null);
-
   const scrollToAbout = () => {
     document
       .getElementById("about")
@@ -38,8 +25,7 @@ export default function HeroSection() {
   };
 
   return (
-    <>
-      <section
+    <section
         id="home"
         className="home-hero"
         aria-labelledby="home-hero-title"
@@ -78,29 +64,7 @@ export default function HeroSection() {
             loading="eager"
           />
 
-          <div className="home-hero__video-prompt">
-            <button
-              ref={videoTriggerRef}
-              type="button"
-              className="home-hero__video-button"
-              onClick={() => setIsVideoOpen(true)}
-              aria-haspopup="dialog"
-            >
-              <span className="home-hero__play">
-                <Play />
-              </span>
-              <span>Watch Our Story</span>
-            </button>
-          </div>
         </div>
       </section>
-
-      <VideoModal
-        isOpen={isVideoOpen}
-        onClose={() => setIsVideoOpen(false)}
-        videoId="setu9Ir1miY"
-        triggerRef={videoTriggerRef}
-      />
-    </>
   );
 }

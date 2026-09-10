@@ -2,11 +2,7 @@ import { SITE_IMAGES } from '../assets/images'
 import './TeamSection.css'
 
 function ArrowRight() {
-  return (
-    <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M3 9h12M10 4l5 5-5 5" />
-    </svg>
-  )
+  return <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" /></svg>
 }
 
 export default function TeamSection() {
@@ -22,9 +18,9 @@ export default function TeamSection() {
           <p>
             Physician-led and globally connected, our team brings together healthcare, research, technology, business, and community leadership.
           </p>
-          <a className="home-team__cta" href="https://jpmuiahealthsystem.org/team.html">
+          <span className="home-team__cta" aria-disabled="true">
             Meet the Team <ArrowRight />
-          </a>
+          </span>
         </div>
 
         <div className="home-team__photo home-team__photo--group">

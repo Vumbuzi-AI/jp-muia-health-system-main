@@ -3,6 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&display=swap');
 @import 'tailwindcss';
 
+[aria-disabled="true"] {
+  cursor: default;
+  pointer-events: none;
+}
+
 /* ── design tokens ─────────────────────────────────────────────── */
 @theme {
   --color-brand:          #1560bd;

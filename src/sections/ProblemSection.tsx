@@ -40,11 +40,7 @@ function JourneyIcon({ name }: JourneyIconProps) {
 }
 
 function ArrowRight() {
-  return (
-    <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M3 9h12M10 4l5 5-5 5" />
-    </svg>
-  )
+  return <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" /></svg>
 }
 
 const journey = [
@@ -72,9 +68,10 @@ export default function ProblemSection() {
             <p>At every handoff, records, decisions, and responsibility can be lost.</p>
           </div>
 
-          <a href="https://jpmuiahealthsystem.org/problem.html" className="home-problem__cta" aria-label="Read more about the problem">
+          <span className="home-problem__cta" aria-disabled="true">
             Understand the Problem <ArrowRight />
-          </a>
+          </span>
+
         </div>
 
         <div className="home-problem__journey" aria-label="The disconnected patient journey">

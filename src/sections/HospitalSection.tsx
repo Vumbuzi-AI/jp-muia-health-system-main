@@ -2,11 +2,7 @@ import { SITE_IMAGES } from '../assets/images'
 import './HospitalSection.css'
 
 function ArrowRight() {
-  return (
-    <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M3 9h12M10 4l5 5-5 5" />
-    </svg>
-  )
+  return <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" /></svg>
 }
 
 const foundations = [
@@ -38,9 +34,10 @@ export default function HospitalSection() {
           ))}
         </div>
 
-        <a className="home-hospital__cta" href="https://jpmuiahealthsystem.org/hospital.html">
+        <span className="home-hospital__cta" aria-disabled="true">
           See the Hospital <ArrowRight />
-        </a>
+        </span>
+
       </div>
     </section>
   )

@@ -2,11 +2,7 @@ import { SITE_IMAGES } from '../assets/images'
 import './KonzaSection.css'
 
 function ArrowRight() {
-  return (
-    <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M3 9h12M10 4l5 5-5 5" />
-    </svg>
-  )
+  return <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" /></svg>
 }
 
 const reasons = [
@@ -47,9 +43,10 @@ export default function KonzaSection() {
               </article>
             ))}
 
-            <a className="home-konza__cta" href="https://jpmuiahealthsystem.org/konza.html">
+            <span className="home-konza__cta" aria-disabled="true">
               Discover Konza <ArrowRight />
-            </a>
+            </span>
+
           </div>
         </div>
       </div>

@@ -1,11 +1,7 @@
 import './SolutionsSection.css'
 
 function ArrowRight() {
-  return (
-    <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M3 9h12M10 4l5 5-5 5" />
-    </svg>
-  )
+  return <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" /></svg>
 }
 
 const carePath = [
@@ -52,9 +48,10 @@ export default function SolutionsSection() {
           ))}
         </div>
 
-        <a className="home-solutions__cta" href="https://jpmuiahealthsystem.org/solutions.html">
+        <span className="home-solutions__cta" aria-disabled="true">
           Explore the Solution <ArrowRight />
-        </a>
+        </span>
+
       </div>
     </section>
   )
