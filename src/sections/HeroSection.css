@@ -1,0 +1,241 @@
+.home-hero,
+.home-hero * { box-sizing: border-box; }
+
+.home-hero {
+  width: 100%;
+  min-height: 100svh;
+  padding-top: 76px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.96fr) minmax(520px, 1.04fr);
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.home-hero__content-wrap {
+  min-width: 0;
+  padding: 42px clamp(28px, 3.75vw, 60px);
+  display: flex;
+  align-items: center;
+}
+
+.home-hero__content {
+  width: 100%;
+  max-width: 760px;
+  margin: 0;
+}
+
+.home-hero__title {
+  max-width: 13.5ch;
+  margin: 0;
+  color: #0a2348;
+  font-size: clamp(46px, 4vw, 58px);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
+.home-hero__title span { display: block; color: #1560bd; }
+
+.home-hero__subtitle {
+  max-width: 56ch;
+  margin: 26px 0 0;
+  color: #5d7390;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.68;
+}
+
+.home-hero__explore {
+  margin-top: 38px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  border: 0;
+  background: transparent;
+  color: #0a2348;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.home-hero__explore-icon {
+  width: 68px;
+  height: 68px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  transition: background-color 220ms ease, color 220ms ease, transform 220ms ease;
+}
+
+.home-hero__explore-icon svg {
+  width: 30px;
+  height: 30px;
+  transition: transform 240ms ease;
+}
+
+.home-hero__explore:hover .home-hero__explore-icon,
+.home-hero__explore:focus-visible .home-hero__explore-icon {
+  background: #0a2348;
+  color: #ffffff;
+  transform: translateY(2px);
+}
+
+.home-hero__explore:hover .home-hero__explore-icon svg,
+.home-hero__explore:focus-visible .home-hero__explore-icon svg { transform: rotate(45deg); }
+
+.home-hero__visual {
+  position: relative;
+  min-height: calc(100svh - 76px);
+  overflow: hidden;
+  background: #dce7f2;
+}
+
+.home-hero__image { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+
+.home-hero__video-prompt {
+  position: absolute !important;
+  top: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: 50% !important;
+  z-index: 2;
+  border-radius: 999px;
+  transform: translate(-50%, -50%) !important;
+  isolation: isolate;
+}
+
+/* Keeps the CTA centred if Figma Make briefly renders the earlier markup. */
+.home-hero__visual > .home-hero__video-button {
+  position: absolute !important;
+  top: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: 50% !important;
+  z-index: 2;
+  transform: translate(-50%, -50%) !important;
+}
+
+.home-hero__video-prompt::before,
+.home-hero__video-prompt::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  z-index: 0;
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  border-radius: 999px;
+  box-shadow: 0 0 0 1px rgba(21, 96, 189, 0.72);
+  pointer-events: none;
+  animation: home-hero-cta-pulse 2.25s ease-out infinite;
+}
+
+.home-hero__video-prompt::after { animation-delay: 0.78s; }
+
+.home-hero__video-button {
+  position: relative;
+  z-index: 1;
+  min-height: 68px;
+  padding: 8px 24px 8px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid rgba(10, 35, 72, 0.1);
+  border-radius: 999px;
+  background: #ffffff;
+  color: #0a2348;
+  box-shadow: 0 18px 44px rgba(7, 28, 58, 0.32);
+  font: inherit;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  animation: home-hero-button-glow 1.9s ease-in-out infinite;
+  transition: background-color 180ms ease, color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.home-hero__video-button:hover,
+.home-hero__video-button:focus-visible {
+  background: #0a2348;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 22px 52px rgba(7, 28, 58, 0.38);
+}
+
+.home-hero__play {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #1560bd;
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(21, 96, 189, 0.28);
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.home-hero__video-button:hover .home-hero__play,
+.home-hero__video-button:focus-visible .home-hero__play {
+  background: #ffffff;
+  color: #1560bd;
+  transform: scale(1.04);
+}
+
+.home-hero__play svg { width: 18px; height: 18px; margin-left: 2px; }
+
+@keyframes home-hero-cta-pulse {
+  0% { opacity: 0.9; transform: scale(1); }
+  78%, 100% { opacity: 0; transform: scale(1.28, 1.52); }
+}
+
+@keyframes home-hero-button-glow {
+  0%, 100% {
+    box-shadow: 0 18px 44px rgba(7, 28, 58, 0.32), 0 0 0 0 rgba(21, 96, 189, 0.52);
+  }
+  50% {
+    box-shadow: 0 20px 48px rgba(7, 28, 58, 0.36), 0 0 0 13px rgba(21, 96, 189, 0);
+  }
+}
+
+@media (max-width: 1100px) {
+  .home-hero { grid-template-columns: 1fr; min-height: auto; padding-top: 68px; }
+  .home-hero__content-wrap { padding: 52px 32px 46px; }
+  .home-hero__content { max-width: 760px; margin: 0 auto; }
+  .home-hero__title { max-width: 12ch; font-size: 52px; }
+  .home-hero__visual { min-height: 540px; }
+}
+
+@media (max-width: 700px) {
+  .home-hero__content-wrap { padding: 38px 18px 36px; }
+  .home-hero__title { font-size: 40px; }
+  .home-hero__subtitle { margin-top: 20px; font-size: 15px; line-height: 1.62; }
+  .home-hero__explore { margin-top: 30px; gap: 15px; font-size: 13px; }
+  .home-hero__explore-icon { width: 58px; height: 58px; }
+  .home-hero__explore-icon svg { width: 26px; height: 26px; }
+  .home-hero__visual { min-height: 440px; }
+  .home-hero__video-button { min-height: 62px; padding-right: 19px; font-size: 14px; }
+  .home-hero__play { width: 44px; height: 44px; }
+}
+
+@media (max-width: 420px) {
+  .home-hero__content-wrap { padding-inline: 16px; }
+  .home-hero__title { font-size: 35px; }
+  .home-hero__visual { min-height: 390px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-hero__explore-icon,
+  .home-hero__explore-icon svg,
+  .home-hero__video-button,
+  .home-hero__play { transition: none; }
+  .home-hero__video-button { animation: none; }
+  .home-hero__video-prompt::before,
+  .home-hero__video-prompt::after { animation: none; }
+}

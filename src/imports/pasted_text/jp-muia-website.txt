@@ -1,0 +1,445 @@
+Create a production-quality, fully responsive, multi-page website for J.P. Muia Health System using all the attached HTML, CSS, logo, photography, and content files as the source of truth.
+
+REFERENCE DESIGN:
+Use the design quality, visual rhythm, premium healthcare styling, rounded components, card layouts, and motion language of the ClinicHub Framer template as design inspiration:
+https://www.framer.com/community/marketplace/templates/clinichub/
+
+Do not directly copy ClinicHub’s branding, text, images, proprietary assets, or exact page composition. The finished website must remain a unique J.P. Muia Health System website.
+
+PRIMARY OBJECTIVE:
+Redesign and improve the landing page so it feels like a premium, modern ClinicHub-style healthcare website while preserving the existing J.P. Muia brand, color scheme, logo, photography, video, wording, navigation, page structure, and sections.
+
+IMPORTANT SOURCE-FILE RULES:
+
+1. Treat the attached HTML, CSS, logo, images, and written content as the source of truth.
+2. Do not rewrite, shorten, summarize, replace, or invent J.P. Muia content.
+3. Do not replace the supplied photography with stock photographs.
+4. Do not replace or redesign the supplied J.P. Muia logo.
+5. Do not change the existing blue, dark-blue, yellow, white, and dark-ink brand colors.
+6. Keep all existing pages and navigation routes functional.
+7. Keep the hero video and YouTube video ID: setu9Ir1miY.
+8. Do not create placeholder text, placeholder images, fake doctors, fake testimonials, fake contact information, or fake statistics.
+9. Do not remove any existing landing-page section.
+10. Keep all landing-page sections in their existing order.
+
+FILE AND CSS ARCHITECTURE:
+
+Each page must use its own CSS file:
+
+* index.html must use index.css
+* about.html must use about.css
+* services.html must use services.css
+* testimonials.html must use testimonials.css
+* faqs.html must use faqs.css
+* contact-us.html must use contact-us.css
+
+theme.css is the shared global design-token file containing the J.P. Muia brand colors and reusable shared styles.
+
+Do not combine all page styling into one large CSS file.
+
+If you convert the website to React, keep the same pages as routes and preserve the page-level stylesheet separation. Create reusable components for the header, footer, buttons, cards, statistics, navigation, and video modal, but keep each route’s specific styling separate.
+
+LANDING-PAGE DESIGN DIRECTION:
+
+Create a light, premium, trustworthy, modern healthcare experience.
+
+Use:
+
+* White as the main background
+* Very light blue surfaces and section backgrounds
+* J.P. Muia blue for primary buttons and important highlights
+* Dark blue and ink for headings and body text
+* Yellow only as a restrained accent
+* Large rounded image containers
+* Asymmetric rounded corners
+* Soft blue gradients
+* Subtle borders
+* Soft professional shadows
+* Spacious layouts
+* Strong typography hierarchy
+* Premium healthcare cards
+* Clean icon presentation
+* Carefully controlled decorative shapes
+* Consistent spacing and alignment
+
+Avoid:
+
+* Generic corporate templates
+* Excessive glassmorphism
+* Excessive gradients
+* Excessive animations
+* Overcrowded layouts
+* Tiny text
+* Low-contrast text
+* Random colors
+* Generic stock photography
+* Removing J.P. Muia’s identity
+
+HEADER AND NAVIGATION:
+
+Create a sticky white or slightly translucent navigation header.
+
+Desktop requirements:
+
+* Logo on the left
+* Navigation links on the right
+* Rounded “Partner With Us” primary CTA
+* Subtle bottom border
+* Soft shadow after scrolling
+* Clear hover and keyboard-focus states
+* Dropdown support for the About navigation
+
+Mobile and tablet requirements:
+
+* Accessible hamburger menu
+* Large tap targets of at least 44px
+* Full-width dropdown navigation
+* Menu must not overflow the screen
+* Menu must be keyboard accessible
+* Menu must close correctly
+* Prevent the page from horizontally scrolling when the menu is open
+
+HERO SECTION:
+
+Use a premium two-column layout on desktop.
+
+LEFT SIDE:
+
+Keep the existing wording exactly:
+
+“Africa’s First AI-Smart Hospital”
+
+“World-Class Healthcare, Built in Kenya.”
+
+“J.P. Muia Health System is building an AI-smart, research-ready health system at Konza Technopolis, connecting care from early screening to specialist treatment and follow-up.”
+
+Keep the Partner With Us button and the secondary Explore the System action.
+
+Use a very large but balanced headline. Highlight “Built in Kenya” using J.P. Muia blue.
+
+RIGHT SIDE:
+
+Use images/P1520370.webp in a premium rounded media container.
+
+Include:
+
+* A visible “Watch our story — The Origin” video button
+* A circular play icon
+* A subtle animated pulse around the play button
+* A floating “4M+ Primary Catchment” card
+* A floating “Connected care — Screening to follow-up” card
+* A soft shadow
+* A restrained image zoom interaction
+* An accessible video modal
+
+The video modal must:
+
+* Use video ID setu9Ir1miY
+* Open from the hero video button
+* Open from the Origin section video button
+* Close using a close button
+* Close using the Escape key
+* Close when the backdrop is selected
+* Stop the video after closing
+* Return keyboard focus to the button that opened it
+* Prevent background scrolling while open
+
+STATISTICS SECTION:
+
+Create an elevated white statistics card that slightly overlaps the bottom of the hero.
+
+Keep these values and labels exactly:
+
+* 4M+ — Primary Catchment
+* 120 — Phase 1 Beds
+* 6 — Operating Theatres
+* 2031 — First Patient
+
+Desktop: show four columns.
+
+Tablet: show either four balanced columns or a 2×2 arrangement when needed.
+
+Mobile: show a clean 2×2 grid.
+
+Keep the number count-up animation, but disable it when reduced motion is requested.
+
+INTEGRATED SYSTEM SECTION:
+
+Keep the existing title and paragraph exactly.
+
+Keep the existing feature photograph.
+
+Keep the four system cards:
+
+* Community Health
+* Tertiary Specialist Care
+* The Return Pathway
+* AI-Native Care
+
+Present this section as a premium healthcare bento grid.
+
+Use:
+
+* Rounded cards
+* Light blue backgrounds
+* Clear icons
+* Consistent card heights
+* Gentle hover elevation
+* Subtle blue decorative elements
+* An “All Services” CTA
+
+SERVICE CARDS SECTION:
+
+Keep all six service cards, wording, links, and assigned images:
+
+* Referral Pathways
+* Structured Follow-Up
+* NCD Awareness & Screening
+* Specialist Clinical Skills
+* Research Infrastructure
+* Clinical Trials Ecosystem
+
+Use rounded images with raised white content panels.
+
+Add restrained hover effects:
+
+* Image zoom between 1.03 and 1.07
+* Card elevation between 4px and 8px
+* Softer, deeper shadow on hover
+* Smooth 300–500ms easing
+
+Do not allow hover effects to move surrounding content.
+
+CONTACT STRIP:
+
+Keep:
+
+* +1 973 356 8322
+* +1 606 356 0179
+* Konza Technopolis, Machakos County, Kenya
+* Email/help input
+* Send button
+
+Create a clean, rounded, pale-blue contact strip.
+
+It must become a single-column layout on mobile.
+
+CARE THAT FOLLOWS YOU HOME SECTION:
+
+Keep the exact section title and all three steps:
+
+1. Find You
+2. Treat You
+3. Follow You Home
+
+Keep the existing wording.
+
+Use a pale blue editorial layout with:
+
+* Numbered circular markers
+* Clear vertical rhythm
+* Subtle hover emphasis
+* Large rounded media panel
+* Existing image
+* Existing contact details
+* Existing Get in Touch button
+
+Desktop: two-column composition.
+
+Tablet and mobile: stack the text above the media/contact panel.
+
+THE ORIGIN VIDEO SECTION:
+
+Keep:
+
+* Existing photograph
+* “The Origin” heading
+* Complete existing Dr. Timothy Muia story
+* Existing Watch button
+* Same video ID
+
+Present it as a large cinematic rounded panel.
+
+Use a dark readable image overlay and ensure the paragraph remains readable.
+
+OUR VISION SECTION:
+
+Keep:
+
+* Existing photograph
+* “Our Vision” label
+* Complete quote
+* “Dr. Timothy Muia, Founder & CEO”
+* Existing visual controls
+
+Use a premium editorial quote layout with:
+
+* Large typography
+* Restrained quotation mark treatment
+* Rounded photography
+* Soft pale-blue background panel
+* Balanced whitespace
+* Strong mobile typography
+
+BUILDING MOMENTUM SECTION:
+
+Keep all three existing news cards, including:
+
+* Titles
+* Descriptions
+* Dates
+* Images
+* Links
+
+Use premium elevated cards with rounded images and subtle hover elevation.
+
+Do not change the dates or wording.
+
+FOOTER:
+
+Keep all existing footer content, contact information, navigation, links, and newsletter elements.
+
+Use the existing dark ink background with a restrained blue glow.
+
+Make the footer responsive and prevent footer columns from becoming too narrow on tablets.
+
+MOTION AND INTERACTION:
+
+Use refined ClinicHub-inspired motion.
+
+Include:
+
+* Reveal-on-scroll animation
+* Opacity transition
+* 20–28px vertical movement
+* 600–750ms duration
+* Short staggered delays
+* Gentle image zoom
+* 4–8px card lift
+* Button arrow movement
+* Statistic count-up
+* Slow floating motion for hero status cards
+* Restrained pulse around the hero play button
+* Smooth scrolling
+* Back-to-top button behavior
+
+Use transform and opacity for animation performance.
+
+Do not animate every element.
+
+Do not use distracting bouncing, spinning, flashing, or excessive parallax.
+
+REDUCED MOTION:
+
+Respect prefers-reduced-motion: reduce.
+
+When reduced motion is enabled:
+
+* Stop floating animations
+* Stop pulse animations
+* Disable reveal movement
+* Disable count-up motion
+* Keep all content visible
+* Preserve all functionality
+
+RESPONSIVE BREAKPOINTS:
+
+Test and optimize the website at:
+
+* 1440×1000 desktop
+* 1280px desktop
+* 1024px small desktop
+* 834×1112 tablet
+* 768px small tablet
+* 390×844 mobile
+* 375px mobile
+* 320×700 small mobile
+
+DESKTOP — 1024PX AND ABOVE:
+
+* Two-column hero
+* Four-column statistics
+* Multi-column service cards
+* Generous section spacing
+* Balanced maximum content width
+* Navigation displayed horizontally
+
+TABLET — 768PX TO 1023PX:
+
+* Stack hero text above hero media
+* Use two-column content grids where possible
+* Use 32–48px horizontal spacing
+* Convert cramped four-column layouts into 2×2 layouts
+* Prevent floating cards from overlapping important content
+* Maintain readable heading sizes
+
+MOBILE — BELOW 768PX:
+
+* Single-column page layout
+* Approximately 20px horizontal padding
+* Full-width hero buttons
+* 2×2 statistics
+* Single-column service and news cards
+* Stacked contact strip
+* Touch-friendly navigation
+* Touch targets of at least 44px
+* No horizontal scrolling
+* No clipped text
+* No overlapping content
+
+SMALL MOBILE — 320PX TO 420PX:
+
+* Hide only nonessential decorative elements
+* Never hide actual content
+* Keep the hero video button visible
+* Reduce oversized headings carefully
+* Keep buttons readable and usable
+* Ensure cards fit within the viewport
+
+ACCESSIBILITY REQUIREMENTS:
+
+* Preserve semantic HTML
+* Maintain a logical heading hierarchy
+* Keep meaningful alt text
+* Use proper buttons for interactive controls
+* Use visible keyboard focus states
+* Use at least a 2px focus outline
+* Maintain WCAG AA color contrast
+* Keep modal keyboard support
+* Keep Escape-to-close functionality
+* Keep focus restoration
+* Do not use color alone to communicate meaning
+* Ensure forms have accessible labels
+* Ensure navigation is screen-reader friendly
+
+PERFORMANCE REQUIREMENTS:
+
+* Use the supplied WebP images
+* Lazy-load non-hero images
+* Keep the hero image eager
+* Avoid unnecessary JavaScript libraries
+* Use transform and opacity for animation
+* Avoid layout shifts
+* Avoid oversized decorative assets
+* Preserve relative image paths
+* Do not introduce console errors
+
+FINAL QUALITY CHECK:
+
+Before completing the website:
+
+1. Confirm all six pages open correctly.
+2. Confirm every navigation link works.
+3. Confirm every page loads its matching CSS file.
+4. Confirm theme.css remains the shared color source.
+5. Confirm every image loads from the images folder.
+6. Confirm the hero video opens and closes correctly.
+7. Confirm there are no duplicate IDs.
+8. Confirm there is no horizontal overflow.
+9. Confirm the mobile navigation works.
+10. Confirm all original wording remains.
+11. Confirm all existing sections remain.
+12. Preview at 1440px, 1024px, 834px, 390px, and 320px.
+13. Fix all clipping, overlapping, spacing, and contrast problems before presenting the final result.
+
+Do not present an unfinished wireframe. Produce a polished, usable, production-quality responsive healthcare website.

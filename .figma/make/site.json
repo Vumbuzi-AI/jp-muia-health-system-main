@@ -1,0 +1,11 @@
+{
+  "title": "J.P MUIA",
+  "description": "This web application enhances user experience by optimizing visual hierarchy and information architecture, making it easier for users to navigate and find information.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
