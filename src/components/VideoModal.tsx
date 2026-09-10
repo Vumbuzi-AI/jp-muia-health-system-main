@@ -83,7 +83,7 @@ export default function VideoModal({
 
         <div className="video-modal__player">
           <iframe
-            src={`https://youtube.com/@jpmuiahealthsystem?si=PcISHhVwnd67wM0t`}
+            src={`https://www.youtube-nocookie.com/embed/${encodeURIComponent(videoId)}?autoplay=1&rel=0`}
             title="J.P. Muia Health System story"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
