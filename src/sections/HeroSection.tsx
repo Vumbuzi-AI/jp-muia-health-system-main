@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { SITE_IMAGES } from "../assets/images";
+import heroPhoto from "../assets/PHOTO-2026-09-10-19-43-08.jpg";
 import VideoModal from "../components/VideoModal";
 import "./HeroSection.css";
 
@@ -72,8 +72,8 @@ export default function HeroSection() {
 
         <div className="home-hero__visual">
           <img
-            src={SITE_IMAGES.p1520394}
-            alt="J.P. Muia Health System leaders"
+            src={heroPhoto}
+            alt="J.P. Muia Health System partners shaking hands"
             className="home-hero__image"
             loading="eager"
           />
